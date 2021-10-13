@@ -1,0 +1,255 @@
+/* PC・スマホ兼用のCSSを書く */
+
+
+/*おおもと*/
+.block {
+  color: #fcfcfc;
+  text-align: center;
+  width: 800px;
+  background: rgba(38, 34, 24, 0.8);
+  margin: 0px auto;
+  box-sizing: border-box;
+  border-radius:10px 10px 10px 10px;
+}
+.block2 {
+  color: rgb(0, 0, 0, 0);
+  text-align: center;
+  width: 800px;
+  background: rgb(0, 0, 0, 0);
+  box-sizing: border-box;
+  border-radius:10px 10px 10px 10px;
+}
+
+/*新着情報*/
+.info {
+  -webkit-overflow-scrolling: touch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  display: -webkit-box;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  max-width: 600px;
+  height: 13em;
+  margin: 0 auto;
+  overflow-y: scroll;
+  background: #171712
+}
+
+.info dd,
+
+.info dt {
+  box-sizing: border-box;
+  width: 100%;
+  padding-bottom: .5em;
+  padding-left: .5em
+}
+
+.info dt {
+  font-style: normal;
+  font-weight: initial
+}
+
+.info dt:first-of-type {
+  padding-top: .5em;
+  border-top: 1px dotted #343a40
+}
+
+.info dt time {
+  margin-right: .5em
+}
+
+.info time {
+  color: #adb5bd
+}
+
+.info dd {
+  margin-left: 0;
+  margin-bottom: .5em;
+  border-bottom: 1px dotted #343a40
+}
+
+.info dd:nth-of-type(-n+3) {
+  position: relative
+}
+
+a {
+text-decoration:none;
+}
+a:link { /*アクセスしたことのないリンク*/
+color:#10daa1;
+}
+a:visited { /*アクセスしたことのあるリンク*/
+color:#10daa1;
+}
+a:hover {/*マウスが上に乗っている状態*/
+color:#c2e30d;
+
+text-decoration:underline;
+transition: all 0.2s ease;
+}
+a:active {/*クリック中*/
+color:#33CC00;　
+}
+/*新着情報終わり*/
+
+.circle{
+  /*プロフィール画像*/
+    background-image: url(../img/Profile.png);
+    width:  180px;
+    height: 180px;
+    border-radius: 50%;
+    background-size: 200px 200px;
+    background-position: center top;
+    margin: 0 auto;
+}
+
+/*左寄せ文*/
+div.left {
+    text-align: left;
+    margin: auto 60px;
+    line-height: 1.6;
+    color: #d6d6d6;
+    letter-spacing: 0.8px;
+}
+
+/*タイトル*/
+.Title{
+  position: relative;
+  color: #10daa1;
+  font-size: 1.2em;
+  border-top: 3px solid #3d382f;
+}
+
+/*本文*/
+.tools{
+  font-size: 1.0em;
+  background: #eb2d65;
+  padding: 0.1em 0.3em;
+  text-align: left;
+  margin: 10px 0;
+  border-radius:5px 5px 5px 5px;
+  flex-wrap: wrap;
+
+}
+
+._tools{
+  font-size: 1.0em;
+  text-align: left;
+  margin: 10px 5px;
+  color: #d6d6d6;
+}
+
+.period{
+  font-size: 1.0em;
+  background: #8e2deb;
+  padding: 0.1em 0.3em;
+  text-align: left;
+  margin: 10px 0;
+  border-radius:5px 5px 5px 5px;
+  flex-wrap: wrap;
+}
+
+main {
+  display: flex;
+}
+
+/*本文*/
+.MainSentence{
+  line-height: 1.5;
+  color: #d6d6d6;
+  margin: auto 80px;
+  letter-spacing: 0.7px;
+  line-height: 1.6;
+}
+
+/*強調*/
+.str {
+  display: inline-block;
+  font-size: 120%;
+  color:  #d3cf12;
+}
+
+/*画像リンク*/
+.imglink{
+  text-align: left;
+  margin: 50px auto;
+}
+
+.imglink:hover{
+  opacity: 0.5;
+  transition: all 0.1s ease;
+}
+
+img.example1 {
+  position: relative;
+  top: 0;
+width: 365px;
+height: 200px;
+margin: auto;
+}
+
+
+.youtube {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+.youtube iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+video{
+  position: relative;
+  width: 100%;
+}
+
+  /* スマホ専用のCSSを書く */
+@media (max-width: 768px) {
+
+
+
+.block {
+  width: 95%;
+  margin: 10px auto;
+  border-radius:7px 7px 7px 7px;
+}
+
+.block2 {
+  width: 95%;
+  height: 0px;
+  background: rgb(0, 0, 0, 0);
+}
+
+.circle{
+  width:  150px;
+  height: 150px;
+  background-size: 160px 160px;
+}
+
+div.left {
+    margin: auto 5px;
+    line-height: 1.5;
+}
+
+.tools{
+  margin: 10px 0;
+}
+
+.MainSentence{
+  margin: auto 0;
+}
+
+.imglink{
+  text-align: left;
+  margin: 50px 50px;
+}
+
+img.example1 {
+width: 274px;
+height: 150px;
+}
