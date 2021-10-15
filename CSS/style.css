@@ -1,5 +1,7 @@
 /* PC・スマホ兼用のCSSを書く */
-
+body {
+font-family: sans-serif;
+}
 
 /*おおもと*/
 .block {
